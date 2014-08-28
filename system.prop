@@ -36,7 +36,7 @@ af.resampler.quality=255
 mpq.audio.decode=true
 
 ##fluencetype can be "fluence" or "fluencepro" or "none"
-ro.qc.sdk.audio.fluencetype=none
+ro.qc.sdk.audio.fluencetype=fluence
 
 # System property for cabl
 ro.qualcomm.cabl=0

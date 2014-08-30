@@ -22,26 +22,31 @@ import java.io.File;
 
 public class HighTouchSensitivity {
 
-    private static String GLOVE_MODE_SWITCH_PATH = "/sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity";
+    private static String FILE_GLOVEMODE = "/sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity";
 
     public static boolean isSupported() {
-        File file = new File(GLOVE_MODE_SWITCH_PATH);
-        return file.exists();
+        File f = new File(FILE_GLOVEMODE);
+
+        if(f.exists()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static boolean isEnabled() {
-        try {
-            String value = FileUtils.readOneLine(GLOVE_MODE_SWITCH_PATH);
-            if (value == null) {
-                return false;
-            }
-            return Integer.parseInt(value) == 0;
-        } catch (NumberFormatException nfex) {
+        if (Integer.parseInt(FileUtils.readOneLine(FILE_GLOVEMODE) == 0) {
+            return true;
+        } else {
             return false;
         }
     }
 
     public static boolean setEnabled(boolean status) {
-        return FileUtils.writeLine(GLOVE_MODE_SWITCH_PATH, status ? "0" : "1");
+        if (status == true) {
+            return FileUtils.writeLine(FILE_GLOVEMODE, "0");
+        } else {
+            return FileUtils.writeLine(FILE_GLOVEMODE, "1");
+        }
     }
 }

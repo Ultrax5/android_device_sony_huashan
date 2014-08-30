@@ -35,7 +35,7 @@ public class HighTouchSensitivity {
     }
 
     public static boolean isEnabled() {
-        if (Integer.parseInt(FileUtils.readOneLine(FILE_GLOVEMODE) == 0) {
+        if (Integer.parseInt(FileUtils.readOneLine(FILE_GLOVEMODE)) == 0) {
             return true;
         } else {
             return false;

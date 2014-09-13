@@ -23,7 +23,7 @@ import org.cyanogenmod.hardware.util.FileUtils;
  */
 public class HighTouchSensitivity {
 
-    private static String GLOVEMODE_PATH = "/sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity";
+    private static String GLOVEMODE_PATH = "/sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/finger_threshold";
 
     /**
      * Whether device supports high touch sensitivity.
@@ -39,7 +39,7 @@ public class HighTouchSensitivity {
      * or the operation failed while reading the status; true in any other case.
      */
     public static boolean isEnabled() {
-        return (FileUtils.readOneLine(GLOVEMODE_PATH).equals("0"));
+        return (FileUtils.readOneLine(GLOVEMODE_PATH).equals("20"));
     }
 
     /**
@@ -50,7 +50,7 @@ public class HighTouchSensitivity {
      * failed; true in any other case.
      */
     public static boolean setEnabled(boolean status) {
-        return FileUtils.writeLine(GLOVEMODE_PATH, (status ? "0" : "1"));
+        return FileUtils.writeLine(GLOVEMODE_PATH, (status ? "20" : "100"));
     }
 
 }

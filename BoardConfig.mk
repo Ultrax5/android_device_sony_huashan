@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Product-specific compile-time definitions.
+
+BOARD_EGL_CFG := device/sony/huashan/rootdir/system/lib/egl/egl.cfg
+
 # inherit from Sony common
 include device/sony/common/BoardConfigCommon.mk
 

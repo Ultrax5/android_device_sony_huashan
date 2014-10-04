@@ -612,6 +612,14 @@ service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
+
+# create filesystem if necessary
+service setup_fs /system/bin/setup_fs /dev/block/platform/msm_sdcc.1/by-name/Userdata
+    class core
+    user root
+    group root
+    oneshot
+
 on property:sys.perf.profile=0
     write /sys/devices/system/cpu/cpu0/online 1
     write /sys/devices/system/cpu/cpu1/online 1

@@ -20,6 +20,9 @@ import init.sony.usb.rc
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     symlink /data/tombstones /tombstones
+    write /sys/block/mmcblk0/queue/scheduler noop
+    write /sys/block/mmcblk0/queue/read_ahead_kb 512
+    write /sys/block/mmcblk1/queue/read_ahead_kb 512
 
 on init
 
@@ -96,10 +99,6 @@ on boot
 
     # Install exfat module to support exfat file system
     insmod /system/lib/modules/texfat.ko
-
-    # load custom kernel modules
-    insmod /system/lib/modules/cpufreq_lionheart.ko
-    insmod /system/lib/modules/cpufreq_wheatley.ko
 
     exec /system/bin/btnvtool -O
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -324,6 +323,8 @@ on post-fs-data
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1026000
     write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 30000
+    write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 99
+    write /sys/devices/system/cpu/cpufreq/interactive/input_boost 1
     chown system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
     chown system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
     chown system /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
@@ -634,7 +635,7 @@ on property:sys.perf.profile=2
 
 # Xperia SP glove mod enabled
 on property:sys.boot_completed=1
-    chmod 664 /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity
     write /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity 0
-    chmod 664 /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/finger_threshold
     write /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/finger_threshold 100
+#boot completed, back to deadline
+    write /sys/block/mmcblk0/queue/scheduler deadline

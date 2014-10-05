@@ -38,7 +38,7 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(PRODUCT_OUT)/kernel $(uncompressed_ramdisk) $(r
 
 	$(hide) rm -fr $(PRODUCT_OUT)/system/lib/modules
 	$(hide) cp -r vendor/sony/huashan/proprietary/lib/modules $(PRODUCT_OUT)/system/lib
-	$(hide) cd $(PRODUCT_OUT)/root && chmod 644 * && chmod 755 data && chmod 755 dev && chmod 755 proc && chmod 755 sbin && chmod 755 sys && chmod 755 system && chmod 755 init && chmod 755 init.qcom.syspart_fixup.sh && tar -cvf ramdisk.tar `ls $(PRODUCT_OUT)/root`
+	$(hide) cd $(PRODUCT_OUT)/root && chmod 644 `ls $(PRODUCT_OUT)/root` && chmod 755 $(PRODUCT_OUT)/root/data && chmod 755 $(PRODUCT_OUT)/root/dev && chmod 755 $(PRODUCT_OUT)/root/proc && chmod 755 $(PRODUCT_OUT)/root/sbin && chmod 755 $(PRODUCT_OUT)/root/sys && chmod 755 $(PRODUCT_OUT)/root/system && chmod 755 $(PRODUCT_OUT)/root/init && chmod 755 $(PRODUCT_OUT)/root/init.qcom.syspart_fixup.sh && tar -cvf ramdisk.tar `ls $(PRODUCT_OUT)/root`
 	$(hide) mv $(PRODUCT_OUT)/root/ramdisk.tar $(PRODUCT_OUT)/system/bin/ramdisk.tar
 
 INSTALLED_RECOVERYIMAGE_TARGET := $(PRODUCT_OUT)/recovery.img

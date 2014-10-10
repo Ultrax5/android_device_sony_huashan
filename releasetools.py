@@ -16,8 +16,7 @@
 """Custom OTA Package commands for huashan"""
 
 def FullOTA_InstallEnd(self):
-  self.script.append('symlink("/data/etc/wlan_macaddr0", "/system/etc/firmware/wlan/macaddr0");')
-  self.script.append('symlink("/data/etc/wlan_macaddr1", "/system/etc/firmware/wlan/macaddr1");')
-  self.script.append('symlink("/data/etc/wlan_macaddr2", "/system/etc/firmware/wlan/macaddr2");')
-  self.script.append('symlink("/data/etc/wlan_macaddr3", "/system/etc/firmware/wlan/macaddr3");')
-  
+  self.script.AppendExtra('symlink("/data/etc/wlan_macaddr0", "/system/etc/firmware/wlan/macaddr0");')
+  self.script.AppendExtra('symlink("/data/etc/wlan_macaddr1", "/system/etc/firmware/wlan/macaddr1");')
+  self.script.AppendExtra('symlink("/data/etc/wlan_macaddr2", "/system/etc/firmware/wlan/macaddr2");')
+  self.script.AppendExtra('symlink("/data/etc/wlan_macaddr3", "/system/etc/firmware/wlan/macaddr3");')

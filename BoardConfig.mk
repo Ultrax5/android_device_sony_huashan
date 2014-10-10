@@ -29,6 +29,9 @@ include device/sony/qcom-common/BoardConfigCommon.mk
 TARGET_OTA_ASSERT_DEVICE := C5302,C5303,C5306,huashan
 TARGET_SPECIFIC_HEADER_PATH += device/sony/huashan/include
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/sony/huashan
+
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/sony/msm8960t
 TARGET_KERNEL_CONFIG := viskan_huashan_defconfig

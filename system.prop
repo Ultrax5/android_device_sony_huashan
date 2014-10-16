@@ -19,6 +19,7 @@ persist.timed.enable=true
 
 # Graphics
 ro.sf.lcd_density=320
+debug.composition.type=c2d
 
 # System props for audio
 qcom.audio.init=complete
@@ -90,7 +91,3 @@ ro.qc.sdk.izat.premium_enabled=0
 ro.qc.sdk.izat.service_mask=0x4
 persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
-
-# stirctmode
-persist.sys.strictmode.visual=0
-persist.sys.strictmode.disable=1

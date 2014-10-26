@@ -30,6 +30,9 @@ persist.audio.lowlatency.rec=false
 lpa.decode=true
 lpa.use-stagefright=true
 
+#FM Transmitter
+ro.fm.transmitter=true
+
 # System prop to select audio resampler quality
 af.resampler.quality=255
 

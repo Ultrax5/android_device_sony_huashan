@@ -100,6 +100,17 @@ on boot
     # Install exfat module to support exfat file system
     insmod /system/lib/modules/texfat.ko
 
+    # Load custom CPU governors
+    insmod /system/lib/modules/cpufreq_lionheart.ko
+    insmod /system/lib/modules/cpufreq_wheatley.ko
+
+    # Load custom IO schedulers
+    insmod /system/lib/modules/bfq-iosched.ko
+    insmod /system/lib/modules/fiops-iosched.ko
+    insmod /system/lib/modules/sio-iosched.ko
+    insmod /system/lib/modules/vr-iosched.ko
+    insmod /system/lib/modules/zen-iosched.ko
+
     exec /system/bin/btnvtool -O
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type

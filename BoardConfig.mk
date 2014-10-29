@@ -34,7 +34,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/sony/huashan
 
 # Kernel properties
 TARGET_KERNEL_SOURCE := kernel/sony/msm8960t
-TARGET_KERNEL_CONFIG := viskan_huashan_defconfig
+TARGET_KERNEL_CONFIG := huashan_defconfig
 
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960

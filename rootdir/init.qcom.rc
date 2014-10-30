@@ -102,12 +102,14 @@ on boot
 
     # Load custom CPU governors
     insmod /system/lib/modules/cpufreq_conservative.ko
+    insmod /system/lib/modules/cpufreq_lagfree.ko
     insmod /system/lib/modules/cpufreq_lionheart.ko
     insmod /system/lib/modules/cpufreq_powersave.ko
     insmod /system/lib/modules/cpufreq_wheatley.ko
 
     # Load custom IO schedulers
     insmod /system/lib/modules/bfq-iosched.ko
+    insmod /system/lib/modules/fifo-iosched.ko
     insmod /system/lib/modules/fiops-iosched.ko
     insmod /system/lib/modules/sio-iosched.ko
     insmod /system/lib/modules/vr-iosched.ko

@@ -99,12 +99,18 @@ on boot
 
     # Install exfat module to support exfat file system
     insmod /system/lib/modules/texfat.ko
+    
+    # Load symsearch module
+    insmod /system/lib/modules/symsearch.ko
 
     # Load custom CPU governors
     insmod /system/lib/modules/cpufreq_conservative.ko
+    insmod /system/lib/modules/cpufreq_intelliactive.ko
+    insmod /system/lib/modules/cpufreq_intellidemand2.ko
     insmod /system/lib/modules/cpufreq_lagfree.ko
     insmod /system/lib/modules/cpufreq_lionheart.ko
     insmod /system/lib/modules/cpufreq_powersave.ko
+    insmod /system/lib/modules/cpufreq_smartass2.ko
     insmod /system/lib/modules/cpufreq_wheatley.ko
 
     # Load custom IO schedulers

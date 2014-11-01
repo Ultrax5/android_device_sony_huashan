@@ -121,6 +121,11 @@ on boot
     insmod /system/lib/modules/vr-iosched.ko
     insmod /system/lib/modules/zen-iosched.ko
 
+    # Load zram module and its dependencies
+    insmod /system/lib/modules/zsmalloc.ko
+    insmod /system/lib/modules/lzo.ko
+    insmod /system/lib/modules/zram.ko
+
     exec /system/bin/btnvtool -O
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type

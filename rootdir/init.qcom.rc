@@ -117,6 +117,7 @@ on boot
     insmod /system/lib/modules/bfq-iosched.ko
     insmod /system/lib/modules/fifo-iosched.ko
     insmod /system/lib/modules/fiops-iosched.ko
+    insmod /system/lib/modules/row-iosched.ko
     insmod /system/lib/modules/sio-iosched.ko
     insmod /system/lib/modules/vr-iosched.ko
     insmod /system/lib/modules/zen-iosched.ko

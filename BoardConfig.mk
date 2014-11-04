@@ -19,8 +19,8 @@ BOARD_EGL_CFG := device/sony/huashan/rootdir/system/lib/egl/egl.cfg
 # inherit from Sony common
 include device/sony/common/BoardConfigCommon.mk
 
-# inherit from qcom-common
-include device/sony/qcom-common/BoardConfigCommon.mk
+# inherit from msm8960-common
+include device/sony/msm8960-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/sony/huashan/BoardConfigVendor.mk

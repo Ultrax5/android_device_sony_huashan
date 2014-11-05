@@ -127,9 +127,6 @@ on boot
     insmod /system/lib/modules/lzo.ko
     insmod /system/lib/modules/zram.ko
 
-    # Load frandom module
-    insmod /system/lib/modules/frandom.ko
-
     exec /system/bin/btnvtool -O
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type

@@ -111,7 +111,6 @@ on boot
     insmod /system/lib/modules/cpufreq_lionheart.ko
     insmod /system/lib/modules/cpufreq_powersave.ko
     insmod /system/lib/modules/cpufreq_smartass2.ko
-    insmod /system/lib/modules/cpufreq_smartassH3.ko
     insmod /system/lib/modules/cpufreq_wheatley.ko
 
     # Load custom IO schedulers

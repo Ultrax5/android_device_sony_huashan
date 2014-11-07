@@ -104,6 +104,9 @@ on boot
     insmod /system/lib/modules/symsearch.ko
 
     # Load custom CPU governors
+    insmod /system/lib/modules/cpufreq_abyssplug.ko
+    insmod /system/lib/modules/cpufreq_adaptive.ko
+    insmod /system/lib/modules/cpufreq_badass.ko
     insmod /system/lib/modules/cpufreq_conservative.ko
     insmod /system/lib/modules/cpufreq_intelliactive.ko
     insmod /system/lib/modules/cpufreq_intellidemand2.ko

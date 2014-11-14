@@ -73,10 +73,6 @@ else
     NFCEE_ACCESS_PATH := $(LOCAL_PATH)/rootdir/system/etc/nfcee_access_debug.xml
 endif
 
-# Device specific part for two-stage boot
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/bootrec-device:recovery/bootrec-device
-
 # Additional sbin stuff
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/sbin/wait4tad_static:root/sbin/wait4tad_static \

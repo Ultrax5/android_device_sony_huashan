@@ -187,4 +187,7 @@ BOARD_SEPOLICY_UNION += \
     ueventd.te \
     vold.te \
     wpa_supplicant.te
+# Include an expanded selection of fonts
+EXTENDED_FONT_FOOTPRINT := true
 
+MALLOC_IMPL := dlmalloc

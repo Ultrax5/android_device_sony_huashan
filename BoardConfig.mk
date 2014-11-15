@@ -184,6 +184,7 @@ BOARD_SEPOLICY_UNION += \
     ueventd.te \
     vold.te \
     wpa_supplicant.te
+
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
 
@@ -192,3 +193,6 @@ EXTENDED_FONT_FOOTPRINT := true
 
 #Use dlmalloc
 MALLOC_IMPL := dlmalloc
+
+# MMap compatibility
+BOARD_USES_LEGACY_MMAP := true

@@ -197,3 +197,5 @@ MALLOC_IMPL := dlmalloc
 
 # MMap compatibility
 BOARD_USES_LEGACY_MMAP := true
+
+TARGET_USES_LOGD := false

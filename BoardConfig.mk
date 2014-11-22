@@ -154,6 +154,20 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 # Dumpstate
 BOARD_LIB_DUMPSTATE := libdumpstate.sony
 
+BOARD_SEPOLICY_DIRS += \
+    device/sony/huashan/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    bluetooth_loader.te \
+    bridge.te \
+    camera.te \
+    dhcp.te \
+    kickstart.te \
+    qmux.te \
+    tee.te \
+    thermald.te \
+    wpa_supplicant.te
+
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
 

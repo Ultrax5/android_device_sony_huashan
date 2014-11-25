@@ -23,8 +23,6 @@ on early-init
     write /sys/block/mmcblk0/queue/scheduler noop
     write /sys/block/mmcblk0/queue/read_ahead_kb 512
     write /sys/block/mmcblk1/queue/read_ahead_kb 512
-    # TEMPORARY: set selinux permissive
-    write /sys/fs/selinux/enforce 0
 
 on init
 
@@ -98,6 +96,9 @@ on early-boot
     write /sys/module/pm8921_charger/parameters/enable_lowbatt_detect 1
 
 on boot
+
+    # TEMPORARY: set selinux permissive
+    write /sys/fs/selinux/enforce 0
 
     # Use performance governor on boot
     write /sys/devices/system/cpu/cpu0/online 1

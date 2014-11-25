@@ -97,9 +97,6 @@ on early-boot
 
 on boot
 
-    # TEMPORARY: set selinux permissive
-    write /sys/fs/selinux/enforce 0
-
     # Use performance governor on boot
     write /sys/devices/system/cpu/cpu0/online 1
     write /sys/devices/system/cpu/cpu1/online 1
@@ -701,3 +698,5 @@ on property:sys.boot_completed=1
     write /sys/block/mmcblk0/queue/scheduler row
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "interactive"
+    # TEMPORARY: set selinux permissive
+    write /sys/fs/selinux/enforce 0

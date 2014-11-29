@@ -25,6 +25,9 @@ include device/sony/msm8960-common/BoardConfigCommon.mk
 # inherit from the proprietary version
 -include vendor/sony/huashan/BoardConfigVendor.mk
 
+# inherit sepolices from common repo
+-include device/qcom/sepolicy/sepolicy.mk
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := C5302,C5303,C5306,huashan
 TARGET_SPECIFIC_HEADER_PATH += device/sony/huashan/include

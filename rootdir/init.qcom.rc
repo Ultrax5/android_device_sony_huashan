@@ -501,6 +501,7 @@ service secchand /system/bin/secchand
 
 service netmgrd /system/bin/netmgrd
     class late_start
+    group radio
 
 # start GNSS/Sensor interface daemon
 service gsiff_daemon /system/bin/gsiff_daemon

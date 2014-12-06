@@ -109,6 +109,9 @@ on boot
     # Load symsearch module
     insmod /system/lib/modules/symsearch.ko
 
+    # Load cpufreq limiter
+    insmod /system/lib/modules/cpufreq_limit.ko
+
     # Load custom CPU governors
     insmod /system/lib/modules/cpufreq_abyssplug.ko
     insmod /system/lib/modules/cpufreq_adaptive.ko
@@ -116,6 +119,7 @@ on boot
     insmod /system/lib/modules/cpufreq_conservative.ko
     insmod /system/lib/modules/cpufreq_intelliactive.ko
     insmod /system/lib/modules/cpufreq_intellidemand2.ko
+    insmod /system/lib/modules/cpufreq_intellimm.ko
     insmod /system/lib/modules/cpufreq_lagfree.ko
     insmod /system/lib/modules/cpufreq_lionheart.ko
     insmod /system/lib/modules/cpufreq_powersave.ko

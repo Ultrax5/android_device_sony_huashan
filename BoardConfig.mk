@@ -173,3 +173,19 @@ MALLOC_IMPL := dlmalloc
 BOARD_USES_LEGACY_MMAP := true
 
 TARGET_USES_LOGD := false
+
+# Sepolicy
+BOARD_SEPOLICY_DIRS += \
+    device/sony/huashan/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+       file_contexts \
+       vold.te \
+       netmgrd.te \
+       thermal-engine.te \
+       rmt_storage.te \
+       mpdecision.te \
+       mm-qcamerad.te \
+       location.te \
+       sdcardd.te \
+       system_app.te

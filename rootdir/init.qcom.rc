@@ -109,6 +109,9 @@ on boot
     # Load symsearch module
     insmod /system/lib/modules/symsearch.ko
 
+    # Load cpufreq limiter to allow underclocking of the second core
+    insmod /system/lib/modules/cpufreq_limit.ko
+
     # Load custom CPU governors
     insmod /system/lib/modules/cpufreq_abyssplug.ko
     insmod /system/lib/modules/cpufreq_adaptive.ko
@@ -116,6 +119,7 @@ on boot
     insmod /system/lib/modules/cpufreq_conservative.ko
     insmod /system/lib/modules/cpufreq_intelliactive.ko
     insmod /system/lib/modules/cpufreq_intellidemand2.ko
+    insmod /system/lib/modules/cpufreq_intellimm.ko
     insmod /system/lib/modules/cpufreq_lagfree.ko
     insmod /system/lib/modules/cpufreq_lionheart.ko
     insmod /system/lib/modules/cpufreq_powersave.ko
@@ -135,6 +139,19 @@ on boot
     insmod /system/lib/modules/zsmalloc.ko
     insmod /system/lib/modules/lzo.ko
     insmod /system/lib/modules/zram.ko
+
+    # Load tcp congestion algorithm modules
+    insmod /system/lib/modules/tcp_bic.ko
+    insmod /system/lib/modules/tcp_highspeed.ko
+    insmod /system/lib/modules/tcp_htcp.ko
+    insmod /system/lib/modules/tcp_hybla.ko
+    insmod /system/lib/modules/tcp_illinois.ko
+    insmod /system/lib/modules/tcp_lp.ko
+    insmod /system/lib/modules/tcp_scalable.ko
+    insmod /system/lib/modules/tcp_vegas.ko
+    insmod /system/lib/modules/tcp_veno.ko
+    insmod /system/lib/modules/tcp_westwood.ko
+    insmod /system/lib/modules/tcp_yeah.ko
 
     exec /system/bin/btnvtool -O
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power

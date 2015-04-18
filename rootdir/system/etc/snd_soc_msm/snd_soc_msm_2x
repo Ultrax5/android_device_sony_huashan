@@ -4106,7 +4106,11 @@ SectionDevice
 		'LINEOUT1 DAC Switch':1:1
                 'LINEOUT1 Volume':1:100
 <<<<<<< HEAD
+<<<<<<< HEAD
 		'RX3 Digital Volume':1:71
+=======
+	    'RX3 Digital Volume':1:71
+>>>>>>> 70761ad... huashan: Increase volume
 =======
 	    'RX3 Digital Volume':1:71
 >>>>>>> 70761ad... huashan: Increase volume
@@ -4210,8 +4214,13 @@ SectionDevice
 		'HPHL Volume':1:80
 		'HPHR Volume':1:80
 <<<<<<< HEAD
+<<<<<<< HEAD
 		'RX1 Digital Volume':1:68
 		'RX2 Digital Volume':1:68
+=======
+		'RX1 Digital Volume':1:73
+		'RX2 Digital Volume':1:73
+>>>>>>> 70761ad... huashan: Increase volume
 =======
 		'RX1 Digital Volume':1:73
 		'RX2 Digital Volume':1:73

@@ -179,6 +179,7 @@ BOARD_SEPOLICY_UNION += \
     mpdecision.te \
     netmgrd.te \
     qmux.te \
+    sdcardd.te \
     rild.te \
     rmt.te \
     surfaceflinger.te \

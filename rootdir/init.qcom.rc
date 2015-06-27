@@ -560,6 +560,11 @@ service wcnss-service /system/bin/wcnss_service
     disabled
     oneshot
 
+# Glove input
+
+    chown system system /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity
+    chmod 0660 /sys/devices/i2c-3/3-0024/main_ttsp_core.cyttsp4_i2c_adapter/signal_disparity
+
 service p2p_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf -N \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \

@@ -188,8 +188,6 @@ BOARD_SEPOLICY_UNION += \
     vold.te \
     wpa_supplicant.te
 
-<<<<<<< HEAD
-=======
 # inherit from the proprietary version
 -include vendor/sony/huashan/BoardConfigVendor.mk
 
@@ -347,4 +345,3 @@ OPT4 := (krait)
 
 # Here we define all the GCC Optimization in a single line if they are uncommented
 GCC_OPTIMIZATION_LEVELS := $(OPT1)$(OPT2)$(OPT3)$(OPT4)
->>>>>>> 8321d4f... Apply GCC Optimization

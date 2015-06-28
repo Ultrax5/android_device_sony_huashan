@@ -26,7 +26,7 @@ include device/sony/msm8960-common/BoardConfigCommon.mk
 -include vendor/sony/huashan/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := C5302,C5303,C5306,huashan
+TARGET_OTA_ASSERT_DEVICE := C5302,C5303,C5306,huashan,lbhuashan
 TARGET_SPECIFIC_HEADER_PATH += device/sony/huashan/include
 
 # Releasetools

@@ -23,6 +23,6 @@ This branch is for building CyanogenMod 11 (or Android KitKat 4.4 AOSP based) RO
 
 If you want to build a LBL ROM, you can use my local_manifests git to properly sync up everything.
 
-Then, after doing a repo sync, apply the patches from the tree (cd /home/username/android/device/sony/huashan/patches, ./apply.sh).
+Then, after doing a repo sync, run the setup.sh script from the device folder (Typically: device/sony/huashan)
 
 After that, just follow the "normal" building instructions.

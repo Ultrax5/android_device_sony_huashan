@@ -3,7 +3,7 @@ Sony Xperia SP
 
 ![Sony Xperia SP](http://www-static.se-mc.com/blogs.dir/0/files/2014/05/Xperia-SP-so-vivid-1acd201148921bf895e22b13e5bbf931-940.jpg )
 
-The Sony Xperia SP (codenamed _"Huashan"_) is a mid-range smartphone from Sony Mobile Communications AB.
+<div style="text-align:center">The Sony Xperia SP (codenamed _"Huashan"_) is a mid-range smartphone from Sony Mobile Communications AB.
 
 It was announced on 18 March 2013. It is supported in CyanogenMod 10.2, CyanogenMod 11 and CyanogenMod 12
 
@@ -25,4 +25,4 @@ If you want to build a LBL ROM, you can use my local_manifests git to properly s
 
 Then, after doing a repo sync, apply the patches from the tree (cd /home/username/android/device/sony/huashan/patches, ./apply.sh).
 
-After that, just follow the "normal" building instructions.
+After that, just follow the "normal" building instructions.</div>

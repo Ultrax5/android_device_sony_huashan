@@ -1,0 +1,32 @@
+From 06f594ddb3ab13beddc540759b95fca7aee260d4 Mon Sep 17 00:00:00 2001
+From: Mrcl1450 <marcelo-fil@outlook.com>
+Date: Sat, 27 Jun 2015 18:03:20 +0100
+Subject: [PATCH] Remove signature verification
+
+---
+ install.cpp | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+diff --git a/install.cpp b/install.cpp
+index a66eacc..7ec2a05 100644
+--- a/install.cpp
++++ b/install.cpp
+@@ -269,16 +269,6 @@ really_install_package(const char *path, int* wipe_cache, bool needs_mount)
+     else {
+         err = VERIFY_FAILURE;
+     }
+-    signal(SIGBUS, SIG_DFL);
+-
+-    free(loadedKeys);
+-    LOGI("verify_file returned %d\n", err);
+-    if (err != VERIFY_SUCCESS) {
+-        LOGE("signature verification failed\n");
+-        sysReleaseMap(&map);
+-        ret = INSTALL_CORRUPT;
+-        goto out;
+-    }
+
+     /* Try to open the package.
+      */
+--
+1.9.1
